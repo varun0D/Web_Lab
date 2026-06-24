@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department Time Table</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("jss.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:350px;
+    background-attachment:fixed;
+}
+
+header,footer{
+    text-align:center;
+    padding:10px;
+}
+
+.flex{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+img{
+    width:100px;
+    height:100px;
+}
+
+table{
+    width:95%;
+    margin:auto;
+    border-collapse:collapse;
+}
+
+table,th,td{
+    border:2px solid black;
+}
+
+th,td{
+    padding:8px;
+    text-align:center;
+}
+
+.center{
+    text-align:center;
+}
+
+ul{
+    width:90%;
+    margin:auto;
+}
+
+a{
+    text-decoration:none;
+    color:blue;
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="flex">
+
+<img src="jss.jpg" alt="JSS Logo">
+
+<div>
+<h2>JSS MAHAVIDYAPEETHA</h2>
+<h3>JSS SCIENCE AND TECHNOLOGY UNIVERSITY</h3>
+<h3>Sri Jayachamarajendra College of Engineering, Mysuru</h3>
+</div>
+
+<img src="sjce.jpg" alt="SJCE Logo">
+
+</header>
+
+<hr>
+
+<h2 class="center">Department of Computer Science & Engineering</h2>
+<h3 class="center">Department Time Table (VI Semester - Section E)</h3>
+
+<div class="flex">
+<p><b>Semester:</b> VI</p>
+<p><b>Section:</b> E</p>
+<p><b>Room No:</b> IS Seminar Hall</p>
+</div>
+
+<table>
+
+<tr>
+<th>Day</th>
+<th>7:30-8:30</th>
+<th>8:30-9:30</th>
+<th>9:30-10:30</th>
+<th>10:30-11:00</th>
+<th>11:00-11:50</th>
+<th>11:50-12:40</th>
+<th>12:40-1:30</th>
+<th>1:30-2:30</th>
+<th>2:30-3:30</th>
+<th>3:30-4:30</th>
+<th>4:30-5:30</th>
+</tr>
+
+<tr>
+<td>Monday</td>
+<td></td>
+<td></td>
+<td>OE-II</td>
+<td rowspan="6">BREAK</td>
+<td>20CS641/42/43</td>
+<td>20HU612</td>
+<td>20CS610</td>
+<td rowspan="6">LUNCH</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Tuesday</td>
+<td></td>
+<td></td>
+<td>OE-III</td>
+<td>20CS610</td>
+<td>20CS620</td>
+<td>20HU612</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Wednesday</td>
+<td></td>
+<td>20CS641/42/43</td>
+<td>OE-II</td>
+<td colspan="3">
+20CS630P HW LAB
+</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Thursday</td>
+<td></td>
+<td>20CS630</td>
+<td>OE-III</td>
+<td colspan="3">
+20CS67L & 20CS68L LAB
+</td>
+<td>20CS630</td>
+<td>20CS610</td>
+<td>20CS620</td>
+</tr>
+
+<tr>
+<td>Friday</td>
+<td></td>
+<td>20CS641/42/43</td>
+<td>OE-II</td>
+<td>20CS630</td>
+<td>20CS610</td>
+<td>20CS620</td>
+<td colspan="2">
+20CS630P HW LAB
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Saturday</td>
+<td></td>
+<td></td>
+<td>OE-III</td>
+<td colspan="3">
+20CS67L & 20CS68L LAB
+</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table>
+
+<br>
+
+<h2 class="center">Course Details</h2>
+
+<table>
+
+<tr>
+<th>Course Code</th>
+<th>Course Title</th>
+<th>Credits</th>
+<th>Faculty</th>
+</tr>
+
+<tr>
+<td>20CS610</td>
+<td>Machine Learning</td>
+<td>4</td>
+<td>Prof. SNM</td>
+</tr>
+
+<tr>
+<td>20CS620</td>
+<td>Web Technology</td>
+<td>3</td>
+<td>Prof. VS</td>
+</tr>
+
+<tr>
+<td>20CS630</td>
+<td>Internet of Things</td>
+<td>3</td>
+<td>Prof. SGC</td>
+</tr>
+
+<tr>
+<td>20CS641</td>
+<td>Cloud Computing</td>
+<td>3</td>
+<td>Prof. MAA</td>
+</tr>
+
+<tr>
+<td>20CS642</td>
+<td>Automotive Cyber Security</td>
+<td>3</td>
+<td>Prof. HDN</td>
+</tr>
+
+<tr>
+<td>20CS643</td>
+<td>Cyber Security</td>
+<td>3</td>
+<td>Prof. SPM</td>
+</tr>
+
+</table>
+
+<br>
+
+<h3>Faculty Initials</h3>
+
+<ul>
+<li>SNM - Machine Learning</li>
+<li>VS - Web Technology</li>
+<li>SGC - Internet of Things</li>
+<li>MAA - Cloud Computing</li>
+<li>HDN - Automotive Cyber Security</li>
+<li>SPM - Cyber Security</li>
+</ul>
+
+<h3>Useful Links</h3>
+
+<ul>
+<li><a href="https://jssstuniv.in" target="_blank">JSSSTU Official Website</a></li>
+<li><a href="https://sjce.ac.in" target="_blank">SJCE Website</a></li>
+</ul>
+
+<footer class="flex">
+
+<div>
+<h3>Dr. Srinath S</h3>
+<p>Head of Department</p>
+</div>
+
+<div>
+<h3>Dr. C. Nataraju</h3>
+<p>Principal, SJCE</p>
+</div>
+
+</footer>
+
+</body>
+</html>
