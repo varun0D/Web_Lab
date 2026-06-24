@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback Form</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:60%;
+            margin:auto;
+            margin-top:30px;
+            background:white;
+            padding:20px;
+            border-radius:5px;
+            box-shadow:0px 0px 8px gray;
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        label{
+            font-size:18px;
+        }
+
+        input[type=text],
+        input[type=email],
+        select,
+        textarea{
+            width:100%;
+            padding:8px;
+            margin-top:5px;
+            margin-bottom:15px;
+        }
+
+        textarea{
+            height:100px;
+        }
+
+        input[type=submit]{
+            background:#2979ff;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            cursor:pointer;
+        }
+
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:12px;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Feedback Form</h1>
+
+<form>
+
+<label>Full Name:</label><br>
+<input type="text" placeholder="Your Name">
+
+<label>E-mail:</label><br>
+<input type="email" placeholder="Your E-mail ID">
+
+<label>USN:</label><br>
+<input type="text" placeholder="Your USN">
+
+<label>Select Semester:</label><br>
+<select>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
+
+<label>Branch:</label><br>
+
+<input type="radio" name="branch"> Computer Science and Engineering <br><br>
+<input type="radio" name="branch"> Information Science <br><br>
+<input type="radio" name="branch"> Electronics and Communication <br><br>
+<input type="radio" name="branch"> Non-Circuit Branch <br><br>
+
+<label>Feedback:</label><br>
+<textarea placeholder="Your Feedback & Suggestions"></textarea>
+
+<label>Send me a copy of this Feedback</label><br><br>
+<input type="checkbox"><br><br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</div>
+
+<footer>
+    © JSS Science and Technology University
+</footer>
+
+</body>
+</html>
