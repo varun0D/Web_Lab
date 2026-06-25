@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Demonstration</title>
+
+    <style>
+        body {
+            background-image: url("background.jpg");
+            background-repeat: repeat-x;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Different Font Styles */
+        .font1 {
+            font-family: "Times New Roman";
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .font2 {
+            font-family: Arial;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .font3 {
+            font-family: Courier New;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+
+        /* Link Styles */
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        /* Visibility Property */
+        .visible {
+            visibility: visible;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        .hidden {
+            visibility: hidden;
+            background-color: pink;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>CSS Demonstration</h1>
+
+    <h2>1. Different Font Styles</h2>
+
+    <p class="font1">This is Bold Text using Times New Roman.</p>
+
+    <p class="font2">This is Italic Text using Arial.</p>
+
+    <p class="font3">This is Underlined Text using Courier New.</p>
+
+    <hr>
+
+    <h2>2. Background Repeat Property</h2>
+
+    <p>
+        Background image is repeated horizontally using
+        <b>background-repdeat: repeat-x;</b>
+    </p>
+
+    <hr>
+
+    <h2>3. Link Styles</h2>
+
+    <a href="https://www.google.com" target="_blank">Visit Google</a><br><br>
+
+    <a href="https://www.wikipedia.org" target="_blank">Visit Wikipedia</a>
+
+    <hr>
+
+    <h2>4. Element Visibility</h2>
+
+    <div class="visible">
+        This element is Visible.
+    </div>
+
+    <br>
+
+    <div class="hidden">
+        This element is Hidden (space is reserved).
+    </div>
+
+</body>
+</html>
