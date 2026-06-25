@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <input type="number" id="num1" placeholder="Enter First Number"><br><br>
+
+    <input type="number" id="num2" placeholder="Enter Second Number"><br><br>
+
+    <button onclick="add()">Addition</button>
+    <button onclick="sub()">Subtraction</button>
+    <button onclick="mul()">Multiplication</button>
+    <button onclick="div()">Division</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function add() {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result = " + (a + b);
+        }
+
+        function sub() {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result = " + (a - b);
+        }
+
+        function mul() {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result = " + (a * b);
+        }
+
+        function div() {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+
+            if (b == 0) {
+                document.getElementById("result").innerHTML = "Cannot divide by zero";
+            } else {
+                document.getElementById("result").innerHTML = "Result = " + (a / b);
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+//form validation
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form Validation</title>
+</head>
+<body>
+
+<h2>Student Information Form</h2>
+
+<form>
+
+Name:
+<input type="text" id="name"><br><br>
+
+Email:
+<input type="text" id="email"><br><br>
+
+Mobile No:
+<input type="text" id="mobile"><br><br>
+
+Gender:
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female
+<br><br>
+
+Favorite Color:
+<input type="color" id="color"><br><br>
+
+<input type="button" value="Submit" onclick="validate()">
+<br><br>
+
+<textarea id="output" rows="8" cols="40"></textarea>
+
+</form>
+
+<script>
+
+function validate()
+{
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var mobile=document.getElementById("mobile").value;
+    var color=document.getElementById("color").value;
+
+    var gender="";
+    var g=document.getElementsByName("gender");
+
+    for(var i=0;i<g.length;i++)
+    {
+        if(g[i].checked)
+        {
+            gender=g[i].value;
+        }
+    }
+
+    if(name=="")
+    {
+        alert("Enter Name");
+        return;
+    }
+
+    if(email=="")
+    {
+        alert("Enter Email");
+        return;
+    }
+
+    if(email.indexOf("@")==-1 || email.indexOf(".")==-1)
+    {
+        alert("Invalid Email");
+        return;
+    }
+
+    if(mobile=="")
+    {
+        alert("Enter Mobile Number");
+        return;
+    }
+
+    if(mobile.length!=10 || isNaN(mobile))
+    {
+        alert("Enter Valid Mobile Number");
+        return;
+    }
+
+    if(gender=="")
+    {
+        alert("Select Gender");
+        return;
+    }
+
+    document.getElementById("output").value=
+    "Name : "+name+
+    "\nEmail : "+email+
+    "\nMobile : "+mobile+
+    "\nGender : "+gender+
+    "\nFavorite Color : "+color;
+}
+
+</script>
+
+</body>
+</html>
