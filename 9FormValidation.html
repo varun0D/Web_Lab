@@ -2,46 +2,6 @@
 <html>
 <head>
     <title>Registration Form</title>
-
-    <script>
-        function validate() {
-
-            var uid = document.getElementById("uid").value;
-            var name = document.getElementById("name").value;
-            var pass = document.getElementById("pass").value;
-            var email = document.getElementById("email").value;
-
-            // User ID
-            if (uid.length < 5 || uid.length > 12) {
-                alert("User ID must be 5 to 12 characters.");
-                return false;
-            }
-
-            // Name
-            var letters = /^[A-Za-z ]+$/;
-            if (!letters.test(name) || name.length < 15) {
-                alert("Name should contain only alphabets and minimum 15 characters.");
-                return false;
-            }
-
-            // Password
-            var password = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*!]).{8}$/;
-            if (!password.test(pass)) {
-                alert("Password must be 8 characters with one uppercase, one number and one special character.");
-                return false;
-            }
-
-            // Email
-            var mail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!mail.test(email)) {
-                alert("Invalid Email.");
-                return false;
-            }
-
-            alert("Registration Successful");
-            return true;
-        }
-    </script>
 </head>
 
 <body>
@@ -66,6 +26,82 @@
     <input type="reset" value="Reset">
 
 </form>
+
+<script>
+function validate() {
+
+    var uid = document.getElementById("uid").value;
+    var name = document.getElementById("name").value;
+    var pass = document.getElementById("pass").value;
+    var email = document.getElementById("email").value;
+
+    // User ID
+    if (uid.length < 5 || uid.length > 12) {
+        alert("User ID must be 5 to 12 characters.");
+        return false;
+    }
+
+    // Name
+    if (name.length < 15) {
+        alert("Name should be at least 15 characters.");
+        return false;
+    }
+
+    for (var i = 0; i < name.length; i++) {
+        if (!(name[i] >= 'A' && name[i] <= 'Z') &&
+            !(name[i] >= 'a' && name[i] <= 'z') &&
+            name[i] != ' ') {
+
+            alert("Name should contain only alphabets.");
+            return false;
+        }
+    }
+
+    // Password
+    if (pass.length != 8) {
+        alert("Password must be exactly 8 characters.");
+        return false;
+    }
+
+    if (pass == pass.toLowerCase()) {
+        alert("Password must contain one uppercase letter.");
+        return false;
+    }
+
+    var hasNumber = false;
+    for (var i = 0; i < pass.length; i++) {
+        if (pass[i] >= '0' && pass[i] <= '9') {
+            hasNumber = true;
+            break;
+        }
+    }
+
+    if (!hasNumber) {
+        alert("Password must contain one number.");
+        return false;
+    }
+
+    if (pass.indexOf("@") == -1 &&
+        pass.indexOf("#") == -1 &&
+        pass.indexOf("$") == -1 &&
+        pass.indexOf("%") == -1 &&
+        pass.indexOf("&") == -1 &&
+        pass.indexOf("*") == -1) {
+
+        alert("Password must contain one special character.");
+        return false;
+    }
+
+    // Email
+    if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+        alert("Invalid Email.");
+        return false;
+    }
+
+    alert("Registration Successful");
+    return true;
+}
+</script>
 
 </body>
 </html>
